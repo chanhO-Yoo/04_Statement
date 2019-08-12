@@ -14,7 +14,9 @@ public class SwitchTest {
 	public static void main(String[] args) {
 		SwitchTest s = new SwitchTest();
 //		s.test1();
-		s.test2();
+//		s.test2();
+		s.test3();
+		
 		
 	}
 	
@@ -79,5 +81,52 @@ public class SwitchTest {
 			return;
 		}
 		System.out.println("선택한 메뉴의 가격은 " + price + "입니다.");
+	}
+	
+	/*
+	 * switch문의 fall through
+	 * 
+	 * 회원 등급에 따라 사은품 증정
+	 * 1.골드 : 스마트TV, 전자레인지, 전기다리미
+	 * 2.실버 : 전자렌지, 전기다리미
+	 * 3.브론즈 : 전기다리미
+	 * 
+	 */
+	public void test3() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("당신의 회원등근을 선택하세요");
+		System.out.println("1.골드 2.실버 3.브론즈");
+		System.out.print(">>");
+		//사용자 선택 변수
+		int grade = sc.nextInt();
+		//등급별 선물 목록 변수
+		String present = "";
+		
+//		switch(grade) {
+//		case 1:
+//			present = "스마트TV, 전자레인지, 전기다리미";
+//			break;
+//		case 2:
+//			present = "전자레인지, 전기다리미";
+//			break;
+//		case 3:
+//			present = "전기다리미";
+//			break;
+//		default:
+//			System.out.println("없는 번호입니다. 종료합니다.");
+//		}
+		
+		switch(grade) {
+		case 1:
+			present += "스마트TV ";
+		case 2:
+			present += "전자레인지 ";
+		case 3:
+			present += "전기다리미 ";
+			break;
+		default:
+			System.out.println("없는 번호입니다. 종료합니다.");
+		}
+		System.out.println("선물목록 : "+present);
 	}
 }
