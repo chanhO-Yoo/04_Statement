@@ -53,8 +53,8 @@ public class RandomNumberTest {
 		System.out.println("rnd4="+rnd4);
 		
 		System.out.println("---------------");
-		System.out.println(rnd.nextBoolean());//??
-		System.out.println(rnd.nextDouble());//??
+		System.out.println(rnd.nextBoolean());//boolean(불린) type의 난수 출력
+		System.out.println(rnd.nextDouble());//double(실수) type의 난수 출력
 	}
 	
 	/*
