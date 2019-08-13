@@ -145,6 +145,25 @@ public class BreakContinueTest {
 			}
 			multiSum *= i;
 		}
+		
+//		for(i=1;i<=inputNum;i++) {
+//			if(i%2==0) {
+//				continue;
+//			}
+//			multiSum *= i;
+//		}
+		
+//		while(true) {
+//			i++;
+//			if(i%2==0) {
+//				continue;
+//			}
+//			
+//			
+//			if(i>inputNum) {break;}
+//			
+//			multiSum *= i;
+//		}
 		System.out.println(multiSum);
 	}
 }
